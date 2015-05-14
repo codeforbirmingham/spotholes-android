@@ -32,9 +32,6 @@ public class Pothole extends RealmObject {
     @SerializedName("thumb_url")
     public String thumbUrl;
 
-    @SerializedName("api_key")
-    public String apiKey;
-
     @SerializedName("pothole_logs")
     public RealmList<Log> logs;
 
