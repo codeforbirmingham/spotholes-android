@@ -1,4 +1,4 @@
-package org.codeforbirmingham.potholes;
+package org.codeforbirmingham.spotholes;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

@@ -1,14 +1,14 @@
-package org.codeforbirmingham.potholes.network;
+package org.codeforbirmingham.spotholes.network;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.octo.android.robospice.retrofit.RetrofitGsonSpiceService;
 import com.squareup.okhttp.OkHttpClient;
 
-import org.codeforbirmingham.potholes.R;
-import org.codeforbirmingham.potholes.SpotholesApplication;
-import org.codeforbirmingham.potholes.network.potholes.PotholeApiService;
-import org.codeforbirmingham.potholes.utils.Util;
+import org.codeforbirmingham.spotholes.R;
+import org.codeforbirmingham.spotholes.SpotholesApplication;
+import org.codeforbirmingham.spotholes.network.potholes.PotholeApiService;
+import org.codeforbirmingham.spotholes.utils.Util;
 import org.codeforbirmingham.spotholes.util.Environment;
 
 import java.security.KeyManagementException;

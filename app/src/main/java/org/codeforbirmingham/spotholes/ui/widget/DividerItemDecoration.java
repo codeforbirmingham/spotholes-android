@@ -1,4 +1,4 @@
-package org.codeforbirmingham.potholes.ui.widget;
+package org.codeforbirmingham.spotholes.ui.widget;
 
 import android.content.Context;
 import android.content.res.TypedArray;

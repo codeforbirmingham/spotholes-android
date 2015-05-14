@@ -1,9 +1,9 @@
-package org.codeforbirmingham.potholes.network.potholes.requests;
+package org.codeforbirmingham.spotholes.network.potholes.requests;
 
 import com.octo.android.robospice.request.retrofit.RetrofitSpiceRequest;
 
-import org.codeforbirmingham.potholes.SpotholesApplication;
-import org.codeforbirmingham.potholes.network.potholes.PotholeApiService;
+import org.codeforbirmingham.spotholes.SpotholesApplication;
+import org.codeforbirmingham.spotholes.network.potholes.PotholeApiService;
 
 import io.realm.Realm;
 

@@ -1,6 +1,6 @@
-package org.codeforbirmingham.potholes.network.potholes;
+package org.codeforbirmingham.spotholes.network.potholes;
 
-import org.codeforbirmingham.potholes.models.Pothole;
+import org.codeforbirmingham.spotholes.models.Pothole;
 
 import retrofit.http.GET;
 

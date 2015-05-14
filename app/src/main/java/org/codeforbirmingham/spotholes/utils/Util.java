@@ -1,4 +1,4 @@
-package org.codeforbirmingham.potholes.utils;
+package org.codeforbirmingham.spotholes.utils;
 
 import android.content.Context;
 import android.util.DisplayMetrics;

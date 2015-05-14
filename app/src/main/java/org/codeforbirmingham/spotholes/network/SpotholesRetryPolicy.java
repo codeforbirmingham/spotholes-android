@@ -1,4 +1,4 @@
-package org.codeforbirmingham.potholes.network;
+package org.codeforbirmingham.spotholes.network;
 
 import com.octo.android.robospice.persistence.exception.SpiceException;
 import com.octo.android.robospice.retry.RetryPolicy;

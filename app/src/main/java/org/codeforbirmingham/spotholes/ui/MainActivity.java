@@ -1,10 +1,10 @@
-package org.codeforbirmingham.potholes.ui;
+package org.codeforbirmingham.spotholes.ui;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.ActionBarActivity;
 
-import org.codeforbirmingham.potholes.R;
+import org.codeforbirmingham.spotholes.R;
 
 public class MainActivity extends ActionBarActivity {
 

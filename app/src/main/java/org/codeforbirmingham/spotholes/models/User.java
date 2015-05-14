@@ -1,4 +1,4 @@
-package org.codeforbirmingham.potholes.models;
+package org.codeforbirmingham.spotholes.models;
 
 import com.google.gson.annotations.SerializedName;
 
