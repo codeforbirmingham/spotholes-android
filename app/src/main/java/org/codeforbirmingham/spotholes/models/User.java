@@ -2,6 +2,8 @@ package org.codeforbirmingham.spotholes.models;
 
 import com.google.gson.annotations.SerializedName;
 
+import java.util.ArrayList;
+
 import io.realm.RealmObject;
 import io.realm.annotations.PrimaryKey;
 
@@ -24,5 +26,9 @@ public class User extends RealmObject {
 
     @SerializedName("api_key")
     public String apiKey;
+
+    public class List extends ArrayList<User> {
+
+    }
 
 }
