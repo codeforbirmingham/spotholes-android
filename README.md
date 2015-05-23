@@ -1,4 +1,3 @@
-potholes
+spotholes for Android
 ========
-
-Android Pothole 311 app for Code for Birmingham
+![spotholes logo](http://i.imgur.com/7BRBCtS.png "spotholes logo")
