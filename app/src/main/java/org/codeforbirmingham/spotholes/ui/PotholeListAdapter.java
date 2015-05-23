@@ -1,11 +1,11 @@
-package  org.codeforbirmingham.potholes.ui;
+package  org.codeforbirmingham.spotholes.ui;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import org.codeforbirmingham.potholes.R;
+import org.codeforbirmingham.spotholes.R;
 
 public class PotholeListAdapter extends RecyclerView.Adapter<PotholeListAdapter.ViewHolder> {
 
