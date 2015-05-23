@@ -11,12 +11,15 @@ import org.codeforbirmingham.spotholes.network.potholes.PotholeApiService;
 import org.codeforbirmingham.spotholes.utils.Util;
 import org.codeforbirmingham.spotholes.util.Environment;
 
+import java.io.IOException;
+import java.io.InputStream;
 import java.security.KeyManagementException;
 import java.security.KeyStore;
 import java.security.KeyStoreException;
 import java.security.NoSuchAlgorithmException;
 import java.security.SecureRandom;
 import java.security.UnrecoverableKeyException;
+import java.security.cert.CertificateException;
 
 import javax.net.ssl.KeyManagerFactory;
 import javax.net.ssl.SSLContext;
@@ -68,6 +71,25 @@ public class SpotholesSpiceService extends RetrofitGsonSpiceService {
         super.onCreate();
 
         addRetrofitInterface(PotholeApiService.class);
+    }
+
+    protected KeyStore readKeyStore() {
+        KeyStore ks = null;
+        try {
+            ks = KeyStore.getInstance("BKS");
+            InputStream inputStream = SpotholesApplication.getContext().getResources().openRawResource(R.raw.spotholes);
+            ks.load(inputStream, SpotholesApplication.getContext().getString(R.string.store_pass).toCharArray());
+        } catch (KeyStoreException e) {
+            e.printStackTrace();
+        } catch (CertificateException e) {
+            e.printStackTrace();
+        } catch (NoSuchAlgorithmException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            return ks;
+        }
     }
 
     protected OkHttpClient getClient() {
