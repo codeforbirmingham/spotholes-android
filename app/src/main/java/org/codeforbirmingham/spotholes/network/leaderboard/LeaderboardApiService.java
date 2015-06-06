@@ -1,6 +1,7 @@
 package org.codeforbirmingham.spotholes.network.leaderboard;
 
 import org.codeforbirmingham.spotholes.models.User;
+import org.codeforbirmingham.spotholes.models.UserList;
 
 import retrofit.http.GET;
 
@@ -10,5 +11,5 @@ import retrofit.http.GET;
 public interface LeaderboardApiService {
 
     @GET("/leaderboard")
-    User.List getLeaderboard();
+    UserList getLeaderboard();
 }

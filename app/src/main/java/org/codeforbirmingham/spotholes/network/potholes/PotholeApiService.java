@@ -1,6 +1,7 @@
 package org.codeforbirmingham.spotholes.network.potholes;
 
 import org.codeforbirmingham.spotholes.models.Pothole;
+import org.codeforbirmingham.spotholes.models.PotholeList;
 
 import retrofit.http.GET;
 import retrofit.http.Header;
@@ -18,10 +19,10 @@ import retrofit.mime.TypedFile;
 public interface PotholeApiService {
 
     @GET("/potholes")
-    Pothole.List getPotholes();
+    PotholeList getPotholes();
 
     @GET("/potholes")
-    Pothole.List getPotholes(
+    PotholeList getPotholes(
             @Query("status") String status,
             @Query("lower_left_longitude") double lowerLeftLongitude,
             @Query("lower_left_latitude") double lowerLeftLatitude,

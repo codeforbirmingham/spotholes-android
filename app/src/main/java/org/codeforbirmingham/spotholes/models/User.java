@@ -16,19 +16,46 @@ public class User extends RealmObject {
 
     @PrimaryKey
     @SerializedName("id")
-    public int id;
+    private int id;
 
     @SerializedName("score")
-    public int score;
+    private int score;
 
     @SerializedName("imei")
-    public String imei;
+    private String imei;
 
     @SerializedName("api_key")
-    public String apiKey;
+    private String apiKey;
 
-    public class List extends ArrayList<User> {
-
+    public int getId() {
+        return id;
     }
 
+    public String getApiKey() {
+        return apiKey;
+    }
+
+    public String getImei() {
+        return imei;
+    }
+
+    public int getScore() {
+        return score;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public void setScore(int score) {
+        this.score = score;
+    }
+
+    public void setImei(String imei) {
+        this.imei = imei;
+    }
+
+    public void setApiKey(String apiKey) {
+        this.apiKey = apiKey;
+    }
 }

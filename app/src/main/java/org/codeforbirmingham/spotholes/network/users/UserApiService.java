@@ -1,6 +1,7 @@
 package org.codeforbirmingham.spotholes.network.users;
 
 import org.codeforbirmingham.spotholes.models.Pothole;
+import org.codeforbirmingham.spotholes.models.PotholeList;
 import org.codeforbirmingham.spotholes.models.User;
 
 import retrofit.http.GET;
@@ -20,5 +21,5 @@ public interface UserApiService {
     User createUser(@Query("name") String name, @Query("imei") String imei);
 
     @GET("/users/report")
-    Pothole.List getUserReport(@Header("X-Api-Key") String apiKey);
+    PotholeList getUserReport(@Header("X-Api-Key") String apiKey);
 }

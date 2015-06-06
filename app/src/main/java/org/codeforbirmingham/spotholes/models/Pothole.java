@@ -18,27 +18,79 @@ public class Pothole extends RealmObject {
 
     @PrimaryKey
     @SerializedName("id")
-    public int id;
+    private int id;
 
     @SerializedName("name")
-    public String name;
+    private String name;
 
     @SerializedName("score")
-    public int score;
+    private int score;
 
     @SerializedName("image_url")
-    public String imageUrl;
+    private String imageUrl;
 
     @SerializedName("thumb_url")
-    public String thumbUrl;
+    private String thumbUrl;
 
     @SerializedName("pothole_logs")
-    public RealmList<Log> logs;
+    private RealmList<Log> logs;
 
     @SerializedName("user")
-    public User user;
+    private User user;
 
-    public static class List extends ArrayList<Pothole> {
+    public User getUser() {
+        return user;
     }
 
+    public int getId() {
+        return id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getScore() {
+        return score;
+    }
+
+    public String getImageUrl() {
+        return imageUrl;
+    }
+
+    public String getThumbUrl() {
+        return thumbUrl;
+    }
+
+    public RealmList<Log> getLogs() {
+        return logs;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setScore(int score) {
+        this.score = score;
+    }
+
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
+    }
+
+    public void setThumbUrl(String thumbUrl) {
+        this.thumbUrl = thumbUrl;
+    }
+
+    public void setLogs(RealmList<Log> logs) {
+        this.logs = logs;
+    }
 }
