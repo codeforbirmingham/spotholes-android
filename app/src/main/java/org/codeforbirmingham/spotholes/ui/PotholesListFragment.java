@@ -3,6 +3,8 @@ package org.codeforbirmingham.spotholes.ui;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.widget.SwipeRefreshLayout;
+import android.support.v7.widget.DefaultItemAnimator;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -29,10 +31,11 @@ public class PotholesListFragment extends Fragment {
     @InjectView(R.id.swipe_refresh_layout)
     SwipeRefreshLayout swipeRefreshLayout;
 
+    private LinearLayoutManager linearLayoutManager;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
 
         setRetainInstance(true);
     }
@@ -42,12 +45,15 @@ public class PotholesListFragment extends Fragment {
         View view = inflater.inflate(R.layout.potholes_list_fragment, container, false);
         ButterKnife.inject(this, view);
 
+        potholesList.setHasFixedSize(true);
+        potholesList.setItemAnimator(new DefaultItemAnimator());
+
+        linearLayoutManager = new LinearLayoutManager(getActivity());
+        potholesList.setLayoutManager(linearLayoutManager);
+        potholesList.addItemDecoration(new DividerItemDecoration(getActivity(), DividerItemDecoration.VERTICAL_LIST));
+
         return view;
     }
 
-    @Override
-    public void onDestroyView() {
-        super.onDestroyView();
-        ButterKnife.reset(this);
-    }
+
 }

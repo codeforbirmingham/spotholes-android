@@ -1,11 +1,14 @@
 package org.codeforbirmingham.spotholes.ui;
 
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.support.v7.app.ActionBar;
 import android.support.v7.widget.Toolbar;
 import android.widget.FrameLayout;
 
 import org.codeforbirmingham.spotholes.R;
+import org.codeforbirmingham.spotholes.models.Pothole;
 
 import butterknife.ButterKnife;
 import butterknife.InjectView;
@@ -31,9 +34,12 @@ public class PotholesActivity extends BaseActivity {
             ab.setDisplayHomeAsUpEnabled(true);
         }
 
-        if (savedInstanceState == null) {
-//            Fragment potholeListFragment = new PotholeListFragment();
-//            getSupportFragmentManager().beginTransaction().replace(R.id.content_frame, potholeListFragment).commit();
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        PotholesListFragment potholesListFragment = (PotholesListFragment) fragmentManager.findFragmentByTag("potholes_list");
+
+        if(potholesListFragment == null) {
+            potholesListFragment = new PotholesListFragment();
+            fragmentManager.beginTransaction().replace(R.id.content_frame, potholesListFragment, "potholes_list").commit();
         }
     }
 
