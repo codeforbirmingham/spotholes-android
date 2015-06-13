@@ -7,7 +7,9 @@ import com.squareup.okhttp.OkHttpClient;
 
 import org.codeforbirmingham.spotholes.R;
 import org.codeforbirmingham.spotholes.SpotholesApplication;
+import org.codeforbirmingham.spotholes.network.leaderboard.LeaderboardApiService;
 import org.codeforbirmingham.spotholes.network.potholes.PotholeApiService;
+import org.codeforbirmingham.spotholes.network.users.UserApiService;
 import org.codeforbirmingham.spotholes.utils.Util;
 import org.codeforbirmingham.spotholes.util.Environment;
 
@@ -71,6 +73,8 @@ public class SpotholesSpiceService extends RetrofitGsonSpiceService {
         super.onCreate();
 
         addRetrofitInterface(PotholeApiService.class);
+        addRetrofitInterface(LeaderboardApiService.class);
+        addRetrofitInterface(UserApiService.class);
     }
 
     protected KeyStore readKeyStore() {

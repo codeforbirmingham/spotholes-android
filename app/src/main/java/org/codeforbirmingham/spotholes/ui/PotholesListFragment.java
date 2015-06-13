@@ -12,7 +12,10 @@ import android.view.ViewGroup;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
+import com.octo.android.robospice.SpiceManager;
+
 import org.codeforbirmingham.spotholes.R;
+import org.codeforbirmingham.spotholes.network.SpotholesSpiceService;
 
 import butterknife.ButterKnife;
 import butterknife.InjectView;
@@ -32,6 +35,8 @@ public class PotholesListFragment extends Fragment {
     SwipeRefreshLayout swipeRefreshLayout;
 
     private LinearLayoutManager linearLayoutManager;
+
+    public final SpiceManager spotholesApi = new SpiceManager(SpotholesSpiceService.class);
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -55,5 +60,28 @@ public class PotholesListFragment extends Fragment {
         return view;
     }
 
+
+    @Override
+    public void onStart() {
+        super.onStart();
+        spotholesApi.start(getActivity());
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+        if (spotholesApi.isStarted())
+            spotholesApi.shouldStop();
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+    }
+
+    @Override
+    public void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+    }
 
 }

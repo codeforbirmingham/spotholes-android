@@ -7,7 +7,7 @@
     android:fitsSystemWindows="true">
 
     <!-- The main content view -->
-    <RelativeLayout
+    <android.support.design.widget.CoordinatorLayout
         android:layout_width="fill_parent"
         android:layout_height="fill_parent">
 
@@ -31,7 +31,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_below="@+id/appbar" />
-    </RelativeLayout>
+    </android.support.design.widget.CoordinatorLayout>
 
     <android.support.design.widget.NavigationView
         android:id="@+id/nav_view"

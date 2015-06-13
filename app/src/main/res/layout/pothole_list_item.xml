@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/pothole_list_item_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?attr/selectableItemBackground"
+    android:clickable="true">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/pothole_thumbnail"
+        android:layout_width="@dimen/circular_image_size"
+        android:layout_height="@dimen/circular_image_size"
+        android:layout_marginLeft="@dimen/content_padding_normal"
+        android:layout_marginStart="@dimen/content_padding_normal"
+        android:layout_marginTop="@dimen/content_padding_normal"
+        android:scaleType="centerCrop" />
+
+    <TextView
+        android:id="@+id/pothole_title"
+        style="@style/TextAppearance.AppCompat.Subhead"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/pothole_thumbnail"
+        android:layout_marginEnd="@dimen/content_padding_normal"
+        android:layout_marginLeft="@dimen/content_padding_normal"
+        android:layout_marginRight="@dimen/content_padding_normal"
+        android:layout_marginStart="@dimen/content_padding_normal"
+        android:layout_toEndOf="@+id/pothole_thumbnail"
+        android:layout_toLeftOf="@+id/pothole_score"
+        android:layout_toRightOf="@+id/pothole_thumbnail"
+        android:layout_toStartOf="@+id/pothole_score"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="Pothole Title" />
+
+    <TextView
+        android:id="@+id/pothole_submitter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/pothole_title"
+        android:layout_marginEnd="@dimen/content_padding_normal"
+        android:layout_marginLeft="@dimen/content_padding_normal"
+        android:layout_marginRight="@dimen/content_padding_normal"
+        android:layout_marginStart="@dimen/content_padding_normal"
+        android:layout_toEndOf="@+id/pothole_thumbnail"
+        android:layout_toLeftOf="@+id/pothole_score"
+        android:layout_toRightOf="@+id/pothole_thumbnail"
+        android:layout_toStartOf="@+id/pothole_score"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:text="Submitted by Justin at 5:30:09 December 12th" />
+
+    <ImageView
+        android:id="@+id/pothole_upvote"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="@dimen/content_padding_normal"
+        android:layout_marginRight="@dimen/content_padding_normal"
+        android:adjustViewBounds="true"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:clickable="true"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_nav_about" />
+
+    <TextView
+        android:id="@+id/pothole_score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/pothole_upvote"
+        android:layout_alignRight="@+id/pothole_upvote"
+        android:layout_below="@+id/pothole_upvote"
+        android:layout_marginTop="-8dp"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:maxLength="4"
+        android:maxLines="1"
+        android:text="1412"
+        android:textSize="18sp" />
+
+    <ImageView
+        android:id="@+id/pothole_downvote"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_alignLeft="@+id/pothole_score"
+        android:layout_alignStart="@+id/pothole_score"
+        android:layout_below="@+id/pothole_score"
+        android:layout_marginTop="-8dp"
+        android:adjustViewBounds="true"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:clickable="true"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_nav_about" />
+
+</RelativeLayout>

@@ -5,5 +5,9 @@
     <color name="primaryLight">#C8E6C9</color>
     <color name="accent">#03A9F4</color>
 
+    <color name="text_primary">#de000000</color>
+    <color name="text_secondary">#89000000</color>
+    <color name="text_disabled">#42000000</color>
+
     <color name="window_background">#FFF5F5F5</color>
 </resources>
