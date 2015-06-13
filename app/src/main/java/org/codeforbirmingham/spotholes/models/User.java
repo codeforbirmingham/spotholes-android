@@ -2,21 +2,21 @@ package org.codeforbirmingham.spotholes.models;
 
 import com.google.gson.annotations.SerializedName;
 
-import java.util.ArrayList;
-
 import io.realm.RealmObject;
 import io.realm.annotations.PrimaryKey;
 
 /**
  * @author @justinharrison
- *
- * User model for Realm database
+ *         User model for Realm database
  */
 public class User extends RealmObject {
 
     @PrimaryKey
     @SerializedName("id")
     private int id;
+
+    @SerializedName("name")
+    private String name;
 
     @SerializedName("score")
     private int score;
@@ -57,5 +57,13 @@ public class User extends RealmObject {
 
     public void setApiKey(String apiKey) {
         this.apiKey = apiKey;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 }
